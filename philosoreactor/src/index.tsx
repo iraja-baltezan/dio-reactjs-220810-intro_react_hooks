@@ -5,12 +5,13 @@ import { globalStyles } from './styles';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
+// import { css } from '@stitches/react';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 globalStyles()
-
 
 root.render(
   <React.StrictMode>

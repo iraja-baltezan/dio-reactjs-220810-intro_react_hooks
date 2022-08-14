@@ -39,7 +39,8 @@ export const globalStyles = globalCss({
     body: {
         fontFamily: '\'Oswald\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', \'Roboto\', \'Oxygen\',\n    \'Ubuntu\', \'Cantarell\', \'Fira Sans\', \'Droid Sans\', \'Helvetica Neue\',\n    sans-serif',
         WebkitFontSmoothing: 'antialiased',
-        MozOsxFontSmoothing: 'grayscale'
+        MozOsxFontSmoothing: 'grayscale',
+        position: 'relative',
     },
     code: {
         fontFamily: 'source-code-pro, Menlo, Monaco, Consolas, \'Courier New\',\n    monospace'
