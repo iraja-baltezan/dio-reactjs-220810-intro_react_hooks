@@ -6,7 +6,7 @@ const speaker = 'random speaker';
 
 test('renders received quote, speaker and a button', () => {
     render(
-        <QuoteText author={speaker}>
+        <QuoteText speaker={speaker}>
             {quote}
         </QuoteText>
     );

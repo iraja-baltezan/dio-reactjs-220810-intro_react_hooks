@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactEventHandler, useEffect, useRef, useState } from 'react';
 import { globalCss, styled } from '@stitches/react';
 
 import imgShootingStars from './assets/img/shooting-stars.webp';
@@ -46,36 +46,46 @@ const ImgStyled = styled('img', {
 
 type TQuote = {
   quote?: string,
-  author?: string,
+  speaker?: string,
 }
 
 function App() {
   globalStyles();
 
-  const [quote, setQuote] = useState('');
-  const [author, setAuthor] = useState('');
+  const isMounted = useRef(true);
 
-  const handleOnUpdate = async () => {
-    audio.play();
+  const [quote, setQuote] = useState('Loading quote...');
+  const [speaker, setSpeaker] = useState('Loading speaker...');
+
+  const handleOnUpdate = async (event?: React.MouseEvent) => {
     try {
       const quote: TQuote = await getQuote();
-      console.log(quote);
-      if (quote && quote.quote) setQuote(quote.quote);
-      if (quote && quote.author) setAuthor(quote.author);
+      if (!isMounted) return;
+      try {
+        if (event) await audio.play();
+      }
+      catch (err) { console.log('Audio autoplay blocked.') }
+      if (!quote) return;
+      if (quote.quote) setQuote(quote.quote);
+      if (quote.speaker) setSpeaker(quote.speaker);
+
     }
-    catch (err: any){
+    catch (err: any) {
       console.log('Erro: ', err);
     }
   }
 
+  useEffect(() => {
+    handleOnUpdate();
+    return () => {
+      isMounted.current = false;
+    }
+  }, []);
+
   return (
     <>
       <AppStyled>
-        {/* <QuoteText author='Quote text - author'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis ante sem. Curabitur gravida pharetra nunc nec lacinia. Aenean risus diam, elementum in suscipit sit amet, tempus vitae arcu.
-        </QuoteText> */}
-
-        <QuoteText author={author}>{quote}</QuoteText>
+        <QuoteText speaker={speaker}>{quote}</QuoteText>
 
         <QuoteButton onUpdate={handleOnUpdate}>
           One more<br />paradox please...

@@ -17,7 +17,7 @@ const ButtonStyled = styled('button', {
     fontWeight:'bold',
     transform:'rotateZ(-15deg)',
     transition: 'all 200ms',
-    '&:after, &:before': {
+    '&::after, &::before': {
         content: '',
         display: 'block',
         position: 'absolute',
@@ -28,16 +28,10 @@ const ButtonStyled = styled('button', {
         width: '100%',
         height: '100%',
     },
-    '&:after': {
-        content: '',
-        display: 'block',
-        position: 'absolute',
+    '&::after': {
         border: '8px dotted yellow',
-        borderRadius: '2em',
         top: '-9px',
         left: '-8px',
-        width: '100%',
-        height: '100%',
     },
     '&:active': {
         transform: 'scale(0.95) rotateZ(-15deg)',
