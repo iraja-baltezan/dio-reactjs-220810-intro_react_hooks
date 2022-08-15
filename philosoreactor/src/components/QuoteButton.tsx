@@ -15,6 +15,8 @@ const ButtonStyled = styled('button', {
     textShadow: 'white 0 0 8px',
     textTransform:'uppercase',
     fontWeight:'bold',
+    transform:'rotateZ(-15deg)',
+    transition: 'all 200ms',
     '&:after, &:before': {
         content: '',
         display: 'block',
@@ -37,6 +39,9 @@ const ButtonStyled = styled('button', {
         width: '100%',
         height: '100%',
     },
+    '&:active': {
+        transform: 'scale(0.95) rotateZ(-15deg)',
+    }
 })
 
 type TQuoteButtonProps = PropsWithChildren & {

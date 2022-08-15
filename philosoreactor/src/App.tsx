@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { globalCss, styled } from '@stitches/react';
 
 import imgShootingStars from './assets/img/shooting-stars.webp';
 import imgPhilosoraptor from './assets/img/philosoraptor.webp';
+import audioSwoosh from './assets/audio/swoosh.mp3';
+
 import QuoteText from './components/QuoteText';
 import QuoteButton from './components/QuoteButton';
+
+import { getQuote } from './services/quotesService';
+
+const audio = new Audio(audioSwoosh);
 
 const globalStyles = globalCss({
   'body': {
@@ -38,19 +44,41 @@ const ImgStyled = styled('img', {
   zIndex: 1,
 })
 
+type TQuote = {
+  quote?: string,
+  author?: string,
+}
 
 function App() {
   globalStyles();
 
+  const [quote, setQuote] = useState('');
+  const [author, setAuthor] = useState('');
+
+  const handleOnUpdate = async () => {
+    audio.play();
+    try {
+      const quote: TQuote = await getQuote();
+      console.log(quote);
+      if (quote && quote.quote) setQuote(quote.quote);
+      if (quote && quote.author) setAuthor(quote.author);
+    }
+    catch (err: any){
+      console.log('Erro: ', err);
+    }
+  }
+
   return (
     <>
       <AppStyled>
-        <QuoteText author='Quote text - author'>
+        {/* <QuoteText author='Quote text - author'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis ante sem. Curabitur gravida pharetra nunc nec lacinia. Aenean risus diam, elementum in suscipit sit amet, tempus vitae arcu.
-        </QuoteText>
+        </QuoteText> */}
 
-        <QuoteButton>
-          One more<br/>paradox please...
+        <QuoteText author={author}>{quote}</QuoteText>
+
+        <QuoteButton onUpdate={handleOnUpdate}>
+          One more<br />paradox please...
         </QuoteButton>
       </AppStyled>
       <ImgStyled src={imgPhilosoraptor} alt="The philosoraptor." />
