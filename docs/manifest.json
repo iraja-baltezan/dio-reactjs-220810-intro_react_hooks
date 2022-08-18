@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Philosoreactor",
+  "name": "Philosoraptor quotes",
   "icons": [
     {
       "src": "favicon.ico",
