@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/static/js/main.3f96bfc8.js",
-    "static/media/shooting-stars.webp": "/static/media/shooting-stars.f0ac89790022f17b421e.webp",
-    "static/media/swoosh.mp3": "/static/media/swoosh.f36f6a41aa0985a1b0d5.mp3",
-    "static/media/philosoraptor.webp": "/static/media/philosoraptor.65be7f8ecca0243974f3.webp",
-    "index.html": "/index.html",
-    "main.3f96bfc8.js.map": "/static/js/main.3f96bfc8.js.map"
+    "main.js": "https://iraja-baltezan.github.io/dio-reactjs-220810-intro_react_hooks/static/js/main.3f96bfc8.js",
+    "static/media/shooting-stars.webp": "https://iraja-baltezan.github.io/dio-reactjs-220810-intro_react_hooks/static/media/shooting-stars.f0ac89790022f17b421e.webp",
+    "static/media/swoosh.mp3": "https://iraja-baltezan.github.io/dio-reactjs-220810-intro_react_hooks/static/media/swoosh.f36f6a41aa0985a1b0d5.mp3",
+    "static/media/philosoraptor.webp": "https://iraja-baltezan.github.io/dio-reactjs-220810-intro_react_hooks/static/media/philosoraptor.65be7f8ecca0243974f3.webp",
+    "index.html": "https://iraja-baltezan.github.io/dio-reactjs-220810-intro_react_hooks/index.html",
+    "main.3f96bfc8.js.map": "https://iraja-baltezan.github.io/dio-reactjs-220810-intro_react_hooks/static/js/main.3f96bfc8.js.map"
   },
   "entrypoints": [
     "static/js/main.3f96bfc8.js"
