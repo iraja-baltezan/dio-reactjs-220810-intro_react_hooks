@@ -8,6 +8,13 @@ A aplicação cliente, que é uma variação do repositório [naruto-quotes-clie
 
 A pasta `api` contém uma variação do repositório [naruto-quotes-server](https://github.com/celso-henrique/naruto-quotes-server) que responde com textos selecionados aleatoriamente, para consumo da aplicação cliente. Os textos são questões apresentadas com o meme __philosoraptor__.
 
+## Preview da aplicação cliente
+
+O preview da aplicação cliente pode ser acessado em [https://iraja-baltezan.github.io/dio-reactjs-220810-intro_react_hooks](https://iraja-baltezan.github.io/dio-reactjs-220810-intro_react_hooks)
+
+Segue uma captura da tela:
+
+![Captura da tela](docs/screenshot-2.webp)
 
 ## Créditos
 
