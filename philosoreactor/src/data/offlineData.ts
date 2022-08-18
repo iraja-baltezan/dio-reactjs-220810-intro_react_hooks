@@ -4,7 +4,7 @@ export default function getQuoteLocal(excludedId = -1): IQuote {
     const getRandomIndex = () => Math.floor(Math.random() * offlineData.length);
     let randomIndex = getRandomIndex();
     for (let i = 0; i < 20; i++) {
-        if (offlineData[randomIndex].id != excludedId) break;
+        if (offlineData[randomIndex].id !== excludedId) break;
         randomIndex = getRandomIndex();
     }
     return offlineData[randomIndex];

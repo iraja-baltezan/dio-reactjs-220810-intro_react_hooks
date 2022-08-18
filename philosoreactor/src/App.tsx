@@ -1,4 +1,4 @@
-import React, { ReactEventHandler, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { globalCss, styled } from '@stitches/react';
 
 import imgShootingStars from './assets/img/shooting-stars.webp';
