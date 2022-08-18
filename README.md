@@ -6,7 +6,8 @@ para a Digital Innovation One.
 
 A aplicação cliente, que é uma variação do repositório [naruto-quotes-client](https://github.com/celso-henrique/naruto-quotes-client), está na pasta `philosoreactor`.
 
-A pasta `api` contém uma variação do repositório [naruto-quotes-server](https://github.com/celso-henrique/naruto-quotes-server) que responde com textos selecionados aleatoriamente, para consumo da aplicação cliente. Os textos são questões sobre possíveis paradoxos.
+A pasta `api` contém uma variação do repositório [naruto-quotes-server](https://github.com/celso-henrique/naruto-quotes-server) que responde com textos selecionados aleatoriamente, para consumo da aplicação cliente. Os textos são questões apresentadas com o meme __philosoraptor__.
+
 
 ## Créditos
 
